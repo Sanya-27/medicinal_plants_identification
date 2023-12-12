@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Medicinal Plants Identification</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-oS3vJWv+0+p/HaO9L+hbG5AKeG5TT8wTkqZdld4LmFtFqUgE7FpDVIeZLc/NuA4" crossorigin="anonymous">
+    <style>
+        /* Add your custom styles here */
+        body {
+            padding-top: 56px; /* Adjust based on your navbar height */
+        }
+        .navbar {
+            background-color: #10100f; /* Black background */
+        }
+        .navbar a {
+            color: #fff;
+        }
+        .navbar a:hover {
+            color: #3498db; /* Hover color */
+        }
+        .navbar-brand {
+            color: #fff;
+        }
+        .navbar-brand:hover {
+            color: #fff; /* Keep the color the same on hover for the brand */
+        }
+        .navbar-nav {
+            margin-left: auto; /* Align items to the right */
+        }
+        .custom-table {
+        border-color: #4CAF50 !important;
+        } 
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Medicinal Plants</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#upload">Upload</a></li>
+            <li class="nav-item"><a class="nav-link" href="#medicinal-world">Medicinal World</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" style="background-image: url('home_img.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; text-align: center;">
+    <div class="container" style="background-color: rgba(236, 240, 241, 0.7); padding: 30px; border-radius: 10px;">
+        <h1 style="color: #34495e; font-size: 36px;">Medicinal Plants Identification</h1>
+        <p style="font-size: 18px;">Welcome to our Medicinal Plants Identification Project – an innovative initiative aimed at connecting nature enthusiasts, herbalists, and curious minds with the rich world of medicinal flora. In an era where holistic health practices are gaining prominence, the importance of identifying and understanding medicinal plants has never been greater. Medicinal plants have been used for centuries by various cultures worldwide for their healing properties. This project aims to bridge the gap between traditional knowledge and modern technology, making the wealth of information about medicinal plants accessible to a global audience.</p>
+        <p style="font-size: 18px;">Join us on this journey of discovery, as we unlock the secrets of nature's pharmacy and empower individuals to incorporate the benefits of medicinal plants into their lives. Together, let's explore, learn, and contribute to the growing field of herbalism in the digital age. Welcome to the Medicinal World!</p>
+        <a href="#medicinal-world" class="btn btn-primary" style="background-color: #34774d;" >Explore Medicinal World</a>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Upload Section -->
+<section id="upload" style="background-image: url('upload_img.jpg'); background-size: cover; color: #333; padding: 240px 0; text-align: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="upload-box text-center p-5 border border-dark rounded" style="background-color: rgba(255, 255, 255, 0.8); background-position: center bottom;">
+                    <h2 style="color: #333;">Upload an Image of Plant</h2>
+                    <form action="#" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="imageUpload" class="d-block">Choose a file</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="imageUpload" name="imageUpload" accept="image/*" style="display: none;" onchange="displayFileName()">
+                                <label for="imageUpload" class="custom-file-label d-block mb-3" style="cursor: pointer; color: #3498db;">
+                                    <i class="fas fa-cloud-upload-alt mr-2"></i><span id="fileName">Select a file</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" >DETECT</button>
+                        <!-- <h2 style="color: #333; padding: 20px;">Tulsi </h2>
+    <p style="font-size: 20px;">Tulsi is also used to treat heart disease and fever. <br>Tulsi is used to treat respiratory problems</p> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+
+<!-- Medicinal World Section -->
+<section id="medicinal-world" style="background-color: #ffffff; color: #333; padding: 80px 0; text-align: center;">
+    <div class="container">
+        <h2 style="color: #42782d; margin-bottom: 40px;">Medicinal Plants & Their Uses</h2>
+
+        <p style="font-size: 18px;">Explore the rich tapestry of nature's healing wonders through our curated collection of medicinal plants, each possessing unique therapeutic properties. Our platform invites you to discover the incredible world of medicinal plants and their healing properties and holistic benefits of these medicinal plants, unlocking centuries-old wisdom to enhance your well-being naturally. Embark on a journey of health and vitality with the potent remedies that nature has graciously bestowed upon us.</p>
+
+        <div class="table-responsive">
+            <table class="table table-bordered custom-table" style="margin-bottom: 60px; font-size: 17px; border-width: 2px; border-color: #42782d;">
+                <thead>
+                    <tr style="color: #42782d;">
+                        <th scope="col">Hindi Name</th>
+                        <th scope="col">Botanic Name</th>
+                        <th scope="col">Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Amla</td>
+                        <td>Emblica officinalis Linn</td>
+                        <td>Antioxidant, Antistress, Constipation, Fever</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ashgandh</td>
+                        <td>Withania somnifera Dunal</td>
+                        <td>Stress Tolerance, Immunity, Joint Pains, Skin health</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ashok</td>
+                        <td>Saraca indica</td>
+                        <td>Menstrual Irregularities, Uterine Stimulant</td>
+                    </tr>
+
+                    <tr>
+                        <td>Babool</td>
+                        <td>Acacia arabica Willd</td>
+                        <td>Oral Care, Bleeding Gums, Wounds</td>
+                    </tr>
+
+                    <tr>
+                        <td>Brahmi</td>
+                        <td>Bacopa monniera Pennel</td>
+                        <td>Enhances Memory, Anxiety</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dhaniya</td>
+                        <td>Coriandrum sativum Linn</td>
+                        <td>Useful in Indigestion, Flatulence, Controls Spasmodic Pain</td>
+                    </tr>
+
+                    <tr>
+                        <td>Neem</td>
+                        <td>Azadirachta Indica A. Juss</td>
+                        <td>Skin health, Eye Disorders, Bloody Nose, Intestinal Worms</td>
+                    </tr>
+
+                    
+
+                    <tr>
+                        <td>Palasha</td>
+                        <td>Butea monosperma Kuntze</td>
+                        <td>Complexion of Skin, Worm Infestations, Roundworm</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shatavari</td>
+                        <td>Asparagus racemosus Willd</td>
+                        <td>Infertility, Loss Of Libido, Uterine health, Improves Lactation</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shirish</td>
+                        <td>Albizia lebbeck (Linn) Benth Pennel</td>
+                        <td>Bronchial Asthma, Detoxification</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Tulsi</td>
+                        <td>Ocimum sactum Linn</td>
+                        <td>Indigestion, Heart health, Respiratory Diseases</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tamalpatra</td>
+                        <td>Cinnamomum tamala Nees</td>
+                        <td>Diabetes, Digestion, Cold</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 style="color: #42782d;">Benefits & Importance of Medicinal Plants</h2>
+        <div style="text-align: left; font-size: 18px;">
+        <p >Ayurvedic herbs are time-tested for their health and other benefits. The nutritive value they pack is highly recommended for their healing powers. Known to induce no side effects, they have a unique aroma and flavor. When consumed regularly, they act as a perfect mechanism to bring about a balanced harmony between mind and body. They rejuvenate the whole system instead of focusing on one specific organ or body part. Key features of Ayurvedic herbs include:</p>
+
+        
+
+        <ul style="list-style-position: inside; padding-left: 0;">
+            <li>They have a holistic approach and aid in proper absorption and digestion.</li>
+            <li>They are not disease-specific but act as a preventive medicine that positively affects overall well-being by boosting the immune system.</li>
+            <li>They are self-contained and nutritive holistic in nature, therefore, are non-toxic and harmless.</li>
+            <li>It deals with overall well-being and aims to bring harmony between mind, body, and soul.</li>
+            <li>Several metabolic and chronic conditions can be treated without any side effects using Ayurvedic medicines and treatments.</li>
+        </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- About Us Section -->
+<section id="about-us" style="background-color: #c9c4c4; color: #333; padding: 80px 0; text-align: center;">
+    <div class="container">
+        <h2 style="color: #333;">Our Team</h2>
+
+        <div id="team-slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- Team Members Row 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Team Member 1 -->
+                        <div class="col-md-6" style="margin-bottom: 20px;">
+                            <div class="team-member-box">
+                                <div class="team-member-photo">
+                                    <img src="mahak.jpg" alt="Team Member 1" class="img-fluid rounded-circle" style="width: 250px; height: 250px;">
+                                </div>
+                                <div class="team-member-description">
+                                    <h4>Mahak Gupta</h4>
+                                    <p>Role: Image Preprocessing & Integration</p>
+                                    <!-- Add more details as needed -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 2 -->
+                        <div class="col-md-6" style="margin-bottom: 10px;">
+                            <div class="team-member-box">
+                                <div class="team-member-photo">
+                                    <img src="Sanya.jpg" alt="Team Member 2" class="img-fluid rounded-circle" style="width: 250px; height: 250px;">
+                                </div>
+                                <div class="team-member-description">
+                                    <h4>Sanya Chandel</h4>
+                                    <p>Role: Image Preprocessing & Frontend</p>
+                                    <!-- Add more details as needed -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Members Row 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Team Member 3 -->
+                        <div class="col-md-4">
+                            <div class="team-member-box">
+                                <div class="team-member-photo">
+                                    <img src="4.jpg" alt="Team Member 3" class="img-fluid rounded-circle" style="width: 250px; height: 250px;">
+                                </div>
+                                <div class="team-member-description">
+                                    <h4>Bob Smith</h4>
+                                    <p>Role: Marketing</p>
+                                    <!-- Add more details as needed -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 4 -->
+                        <div class="col-md-4">
+                            <div class="team-member-box">
+                                <div class="team-member-photo">
+                                    <img src="4.jpg" alt="Team Member 4" class="img-fluid rounded-circle" style="width: 250px; height: 250px;">
+                                </div>
+                                <div class="team-member-description">
+                                    <h4>Jane Doe</h4>
+                                    <p>Role: Designer</p>
+                                    <!-- Add more details as needed -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 5 -->
+                        <div class="col-md-4">
+                            <div class="team-member-box">
+                                <div class="team-member-photo">
+                                    <img src="4.jpg" alt="Team Member 5" class="img-fluid rounded-circle" style="width: 250px; height: 250px;">
+                                </div>
+                                <div class="team-member-description">
+                                    <h4>Jane Doe</h4>
+                                    <p>Role: Designer</p>
+                                    <!-- Add more details as needed -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more carousel items for additional team members -->
+
+            </div>
+
+            <!-- Slider Controls -->
+            <a class="carousel-control-prev" href="#team-slider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#team-slider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<!-- Font Awesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofpXANtAOpdCOakkDdNpceLE86uRTBgZjN" crossorigin="anonymous"></script>
+
+<script>
+    function displayFileName() {
+        var input = document.getElementById('imageUpload');
+        var fileName = document.getElementById('fileName');
+        fileName.textContent = input.files[0].name;
+    }
+</script>
+
+</body>
+</html>
+
+
