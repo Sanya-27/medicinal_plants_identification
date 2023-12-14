@@ -8,25 +8,32 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-oS3vJWv+0+p/HaO9L+hbG5AKeG5TT8wTkqZdld4LmFtFqUgE7FpDVIeZLc/NuA4" crossorigin="anonymous">
+
+    <!-- Add this in the head section of your HTML file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+
     <style>
         /* Add your custom styles here */
         body {
             padding-top: 56px; /* Adjust based on your navbar height */
         }
         .navbar {
-            background-color: #10100f; /* Black background */
+            background-color: rgba(94, 135, 63, 0.8);/* Black background */
         }
         .navbar a {
-            color: #fff;
+            color: #ffffff;
         }
         .navbar a:hover {
-            color: #3498db; /* Hover color */
+            color: #ffffff; /* Hover color */
         }
         .navbar-brand {
-            color: #fff;
+            color: #ffffff;
         }
         .navbar-brand:hover {
-            color: #fff; /* Keep the color the same on hover for the brand */
+            color: #ffffff; /* Keep the color the same on hover for the brand */
         }
         .navbar-nav {
             margin-left: auto; /* Align items to the right */
@@ -34,35 +41,80 @@
         .custom-table {
         border-color: #4CAF50 !important;
         } 
+        /* Add this style to your existing styles or in a separate CSS file */
+        @keyframes fadeInUp {
+        from {
+        opacity: 0;
+        transform: translateY(20px);
+        }
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+        }
+
+        .animate-fadeInUp {
+        animation: fadeInUp 1s ease-out; /* Adjust the animation duration and timing function */
+        }
+
+        #medicinal-world {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .leaf-image {
+            position: absolute;
+            max-width: 50px;
+            max-height: 50px;
+            pointer-events: none;
+            animation: leaf-fall linear infinite;
+        }
+
+        @keyframes leaf-fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+
+        
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">Medicinal Plants</a>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(130, 177, 83, 0.8);">
+    <a class="navbar-brand" href="#">
+        <img src="logo2.png" height="30" alt="Logo"> MedPlantsAnalyzer
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#upload">Upload</a></li>
-            <li class="nav-item"><a class="nav-link" href="#medicinal-world">Medicinal World</a></li>
+            <li class="nav-item"><a class="nav-link" href="#medicinal-world" onclick="toggleMedicinalWorld()">Medicinal World</a></li>
             <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
         </ul>
     </div>
 </nav>
+
+
 
 <!-- Home Section -->
 <section id="home" style="background-image: url('home_img.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; text-align: center;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div style="background-color: rgba(236, 240, 241, 0.7); padding: 30px; border-radius: 10px;">
-                    <h1 style="color: #34495e; font-size: 36px;">Medicinal Plants Identification</h1>
-                    <p style="font-size: 18px;">Welcome to our Medicinal Plants Identification Project – an innovative initiative aimed at connecting nature enthusiasts, herbalists, and curious minds with the rich world of medicinal flora. In an era where holistic health practices are gaining prominence, the importance of identifying and understanding medicinal plants has never been greater. Medicinal plants have been used for centuries by various cultures worldwide for their healing properties. This project aims to bridge the gap between traditional knowledge and modern technology, making the wealth of information about medicinal plants accessible to a global audience.</p>
+                <div style="background-color: rgba(236, 240, 241, 0.7); padding: 30px; border-radius: 20px;">
+                    <h1 style="color: #34495e; font-size: 36px;">MedPlantsAnalyzer</h1>
+                    <br>
+                    <p style="font-size: 18px;" >Welcome to our Medicinal Plants Identification Project – an innovative initiative aimed at connecting nature enthusiasts, herbalists, and curious minds with the rich world of medicinal flora. In an era where holistic health practices are gaining prominence, the importance of identifying and understanding medicinal plants has never been greater. Medicinal plants have been used for centuries by various cultures worldwide for their healing properties. This project aims to bridge the gap between traditional knowledge and modern technology, making the wealth of information about medicinal plants accessible to a global audience.</p>
                     <p style="font-size: 18px;">Join us on this journey of discovery, as we unlock the secrets of nature's pharmacy and empower individuals to incorporate the benefits of medicinal plants into their lives. Together, let's explore, learn, and contribute to the growing field of herbalism in the digital age. Welcome to the Medicinal World!</p>
                     <a href="#medicinal-world" class="btn btn-primary" style="background-color: #34774d;" >Explore Medicinal World</a>
                 </div>
@@ -111,14 +163,20 @@
 
 
 <!-- Medicinal World Section -->
-<section id="medicinal-world" style="background-color: #ffffff; color: #333; padding: 80px 0; text-align: center;">
+<section id="medicinal-world" style="background-color: #ffffff; color: #333; padding: 80px 0; text-align: center; position: relative;"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+
+    
     <div class="container">
-        <h2 style="color: #42782d; margin-bottom: 40px;">Medicinal Plants & Their Uses</h2>
+        <h2 class="animate__animated animate__fadeInDown" style="color: #42782d; margin-bottom: 40px;">Medicinal Plants & Their Uses</h2>
+        <img src="leaf3.jpg" alt="Medicinal Plants" style="max-width: 20%; height: auto; margin-bottom: 30px;">
 
-        <p style="font-size: 18px;">Explore the rich tapestry of nature's healing wonders through our curated collection of medicinal plants, each possessing unique therapeutic properties. Our platform invites you to discover the incredible world of medicinal plants and their healing properties and holistic benefits of these medicinal plants, unlocking centuries-old wisdom to enhance your well-being naturally. Embark on a journey of health and vitality with the potent remedies that nature has graciously bestowed upon us.</p>
+        <p class="animate__animated animate__fadeInUp" style="font-size: 18px;">Explore the rich tapestry of nature's healing wonders through our curated collection of medicinal plants, each possessing unique therapeutic properties. Our platform invites you to discover the incredible world of medicinal plants and their healing properties and holistic benefits of these medicinal plants, unlocking centuries-old wisdom to enhance your well-being naturally. Embark on a journey of health and vitality with the potent remedies that nature has graciously bestowed upon us.</p>
 
-        <div class="table-responsive">
-            <table class="table table-bordered custom-table" style="margin-bottom: 60px; font-size: 17px; border-width: 2px; border-color: #42782d;">
+        <div class="table-responsive animate__animated animate__fadeIn" style="animation-delay: 0.5s;">
+            <table class="table table-bordered custom-table table-hover" style="margin-bottom: 60px; font-size: 17px; border-width: 2px; border-color: #42782d;">
                 <thead>
                     <tr style="color: #42782d;">
                         <th scope="col">Hindi Name</th>
@@ -204,8 +262,8 @@
             </table>
         </div>
 
-        <h2 style="color: #42782d;">Benefits & Importance of Medicinal Plants</h2>
-        <div style="text-align: left; font-size: 18px;">
+        <h2 class="animate__animated animate__fadeInUp" style="color: #42782d;">Benefits & Importance of Medicinal Plants</h2>
+        <div class="animate__animated animate__fadeInUp" style="text-align: left; font-size: 18px;">
         <p >Ayurvedic herbs are time-tested for their health and other benefits. The nutritive value they pack is highly recommended for their healing powers. Known to induce no side effects, they have a unique aroma and flavor. When consumed regularly, they act as a perfect mechanism to bring about a balanced harmony between mind and body. They rejuvenate the whole system instead of focusing on one specific organ or body part. Key features of Ayurvedic herbs include:</p>
 
         
@@ -348,6 +406,19 @@
         var fileName = document.getElementById('fileName');
         fileName.textContent = input.files[0].name;
     }
+
+    function toggleMedicinalWorld() {
+        const medicinalWorldSection = document.getElementById('medicinal-world');
+        
+        // Toggle a class to trigger the animation
+        medicinalWorldSection.classList.toggle('animate-fadeInUp');
+        
+    }
+    
+
+    AOS.init();
+
+    
 </script>
 
 </body>
