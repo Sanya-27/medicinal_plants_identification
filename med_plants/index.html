@@ -79,6 +79,36 @@
             }
         }
 
+        #home {
+        background-image: url('home_img.jpg');
+        background-size: cover; /* Adjusted */
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    #upload {
+        background-image: url('upload_img.jpg');
+        background-size: cover; /* Adjusted */
+        color: #333;
+        padding: 240px 0;
+        text-align: center;
+    }
+
+    /* Media query for smaller screens */
+    @media only screen and (max-width: 768px) {
+        #home {
+            background-size: auto; /* Adjusted for small screens */
+        }
+
+        #upload {
+            background-size: auto; /* Adjusted for small screens */
+        }
+}
+
+
 
         
     </style>
@@ -103,7 +133,6 @@
         </ul>
     </div>
 </nav>
-
 
 
 <!-- Home Section -->
@@ -171,7 +200,7 @@
     
     <div class="container">
         <h2 class="animate__animated animate__fadeInDown" style="color: #42782d; margin-bottom: 40px;">Medicinal Plants & Their Uses</h2>
-        <img src="leaf3.jpg" alt="Medicinal Plants" style="max-width: 20%; height: auto; margin-bottom: 30px;">
+        <img src="leaf3.jpg" alt="Medicinal Plants"  class="img-fluid" style="max-width: 20%; height: auto; margin-bottom: 30px;">
 
         <p class="animate__animated animate__fadeInUp" style="font-size: 18px;">Explore the rich tapestry of nature's healing wonders through our curated collection of medicinal plants, each possessing unique therapeutic properties. Our platform invites you to discover the incredible world of medicinal plants and their healing properties and holistic benefits of these medicinal plants, unlocking centuries-old wisdom to enhance your well-being naturally. Embark on a journey of health and vitality with the potent remedies that nature has graciously bestowed upon us.</p>
 
